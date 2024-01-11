@@ -3,9 +3,9 @@ const { Post } = require('../../models');
 const isAuth = require("../../utils/auth");
 
 //render post page
-router.get("/", async (req, res) => {
-  const post = { name: "", content: "" }
-  res.render("editpost", { post, newPost: true, loggedIn: req.session.loggedIn });
+router.get('/', async (req, res) => {
+  const post = { name: '', content: '' }
+  res.render('editpost', { post, newPost: true, loggedIn: req.session.loggedIn });
 });
 
 //create a post
@@ -37,7 +37,7 @@ router.delete('/:id',isAuth, async (req, res) => {
     if (postData) {
       res.status(200).json(postData);
     } else {
-      res.status(404).json({ message: "post " + req.params.id + " was not found" });
+      res.status(404).json({ message: 'post ' + req.params.id + ' was not found' });
     }
   } catch (err) {
     res.status(500).json(err);

@@ -1,19 +1,20 @@
 const login = async (event) => {
     event.preventDefault();
 
-    const name = document.querySelector('#name-login').ariaValueMax.trim();
-    const password = document.querySelector('#password-login').ariaValueMax.trim();
-    
-    if(name && password) {
+    const name = document.querySelector('#name-login').value.trim();
+    const password = document.querySelector('#password-login').value.trim();
+
+    if (name && password) {
         const response = await fetch('/api/users/login', {
-            method: 'POST',
-            body: JSON.stringify({name, password}),
-            headers: { 'Content-Type': 'application/json'},
+            method: "POST",
+            body: JSON.stringify({ name, password }),
+            headers: { 'Content-Type': 'application/json' },
         });
+
         if (response.ok) {
             document.location.replace('/dashboard');
         } else {
-            alert(name + 'could not log in');
+            alert(name +' could not log in');
         }
     }
 };
@@ -21,20 +22,20 @@ const login = async (event) => {
 const signup = async (event) => {
     event.preventDefault();
 
-    const name = document.querySelector('#name-signup').ariaValueMax.trim();
-    const password = document.querySelector('#password-signup').value.trim();
+    const name = document.querySelector('#name-signup').value.trim();
+    const password = document.querySelector("#password-signup").value.trim();
 
-    if(name && password) {
+    if (name && password) {
         const response = await fetch('/api/users', {
             method: 'POST',
-            body: JSON.stringify({name, password}),
-            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ name, password }),
+            headers: { 'Content-Type': 'application/json'},
         });
-
-        if(response.ok) {
+        
+        if (response.ok) {
             document.location.replace('/');
         } else {
-            alert('Error creating user');
+            alert("Error creating user");
         }
     }
 };
