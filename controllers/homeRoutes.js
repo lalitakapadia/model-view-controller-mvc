@@ -1,32 +1,31 @@
-const router = require("express").Router();
-const { Post, User, Comment } = require("../models");
-const isAuth = require("../utils/auth");
+const router = require('express').Router();
+const { Post, User, Comment } = require('../models');
+const isAuth = require('../utils/auth');
 
-//login handler
-router.get("/login", (req, res) => {
-    if (req.session.loggedIn) {
-        res.redirect("/");
-    } else {
-        res.render("login");
+ //login handler
+ router.get('/login', (req, res) => {
+     if (req.session.loggedIn) {
+         res.redirect('/');     } else {
+         res.render('login');
     }
-});
+ });
 
 //get all posts
-router.get("/", async (req, res) => {
+router.get('/', isAuth, async (req, res) => {
     console.log("get all posts")
     try {
         const postData = await Post.findAll({
             include: [{
                 model: User,
-                attributes: ["name"]
+                attributes: ['name']
             }]
         });
-
+        console.log('post data received');
         const posts = postData.map((post) =>
             post.get({ plain: true })
         );
-
-        res.render("homepage", {
+        console.log('post data mapped');
+        res.render('homepage', {
             posts,
             loggedIn: req.session.loggedIn
         });
@@ -37,7 +36,7 @@ router.get("/", async (req, res) => {
 });
 
 //get a specific post
-router.get("/post/:id", async (req, res) => {
+router.get('/post/:id', async (req, res) => {
     //check for login
     if (req.session.loggedIn = false) {
         res.redirect("/login")
@@ -47,13 +46,13 @@ router.get("/post/:id", async (req, res) => {
                 include: [
                     {
                         model: User,
-                        attributes: ["name"]
+                        attributes: ['name']
                     },
                     {
                         model: Comment,
                         include: {
                             model: User,
-                            attributes: ["name"]
+                            attributes: ['name']
                         }
                     },
                 ],

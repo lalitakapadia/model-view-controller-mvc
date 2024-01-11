@@ -1,0 +1,20 @@
+{{!-- <article class="card">
+    <div class="card-header flex-row justify-space-between">
+        <h2>
+            <a href="/post/{{post.id}}">{{post.title}}</a>
+        </h2>
+    </div>
+    Posted by {{user.name}} on {{format_date post.date_created}}
+    </div>
+    <div class="card-body">
+        {{body}}
+    </div>
+</article> --}}
+
+<div class="card col-11 m-4 p-1">
+    <div class="card-title d-flex justify-content-between p-2 h4">
+        <a href="/post/{{id}}" class="h2 text-dark">{{title}}</a>
+        <p class="h4 text-warning">(posted by {{user.name}})</p>
+    </div>
+    <div class="card-body">{{content}}</div>
+</div> 
