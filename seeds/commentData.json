@@ -1,0 +1,27 @@
+[
+    {
+        "comment": "This is a comment",
+        "user_id": 1,
+        "post_id": 1
+    },
+    {
+        "comment": "This is another comment",
+        "user_id": 2,
+        "post_id": 2
+    },
+    {
+        "comment": "This is a third comment",
+        "user_id": 3,
+        "post_id": 3
+    },
+    {
+        "comment": "DO NOT TRUST ANY OS MACHINE",
+        "user_id": 4,
+        "post_id": 3
+    },
+    {
+        "comment": "The title of this blogpost is misleading",
+        "user_id": 2,
+        "post_id": 3
+    }
+]

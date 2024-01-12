@@ -11,7 +11,7 @@ const isAuth = require('../utils/auth');
  });
 
 //get all posts
-router.get('/', isAuth, async (req, res) => {
+router.get('/', async (req, res) => {
     console.log("get all posts")
     try {
         const postData = await Post.findAll({
