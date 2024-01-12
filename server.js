@@ -14,7 +14,7 @@ const path = require('path');
 
 const app = express();
 //setup port for local or heroku operation
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 
 //setup session object
 const sess = {

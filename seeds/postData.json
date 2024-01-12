@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Hello World!",
+        "content": "hello world",
+        "user_id": "1"
+    },
+    {
+        "title": "Tech Blog Post 1",
+        "content": "This is a tech blog post",
+        "user_id": "1"
+    },
+    {
+        "title": "Windows vs Mac",
+        "content": "For many years, people have argued over what the best computer system is: Windows or Mac. I am here to tell you that the answer is neither.  The best computer system is Linux.  Linux is a free and open source operating system that is used by many of the world's largest companies.  It is also used by many of the world's largest governments.  Linux is also used by many of the world's largest universities.  Linux is also used by many of the world's largest companies.  Linux rules, Mac and Windows drool.",
+        "user_id": "1"
+    },
+    {
+        "title": "This is not a tech blog post",
+        "content": "Some people think that this is a tech blog post, but it is not.  It is a blog post about how this is not a tech blog post.  I hope that this clears up any confusion.",
+        "user_id": "1"
+    },
+    {
+        "title": "Bioengineering",
+        "content": "There's a lot of misconceptions about bioengineering. For example, many people think that bioengineering is just about making new organisms. But bioengineering is much more than that. Bioengineering is about making new organisms that can do things that no other organism can do. For example, bioengineers are working on making organisms that can make biofuels. Biofuels are fuels that are made from living organisms. Biofuels are a renewable source of energy. Biofuels are a renewable source of energy that can be used to power cars, trucks, and planes.",
+        "user_id": "2"
+    },
+    {
+        "title": "Biohacking: Reality or Fiction?",
+        "content": "Can you really hack your biology?  What is biohacking? Some people believe you can hack your sleep schedule by simply changing your diet and habits. But can you really push yourself past the biological limits? What are your thoughts on biohacking? Do you think it is possible?",
+        "user_id": "2"
+    }
+]
