@@ -1,17 +1,4 @@
-{{!-- <article class="card">
-    <div class="card-header flex-row justify-space-between">
-        <h2>
-            <a href="/post/{{post.id}}">{{post.title}}</a>
-        </h2>
-    </div>
-    Posted by {{user.name}} on {{format_date post.date_created}}
-    </div>
-    <div class="card-body">
-        {{body}}
-    </div>
-</article> --}}
-
-<div class="row mb-4 project">
+<div class="ml-4">
     <h2><a href="/post/{{id}}">{{title}}</a></h2>
     <p class="h4 text-warning">posted by {{user.name}} on {{format_date date_created}}</p>
     <p>{{content}}</p>
